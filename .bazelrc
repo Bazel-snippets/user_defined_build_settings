@@ -1,0 +1,3 @@
+# Alias for the flag controlling sanitizers.
+build --flag_alias=ff=//:first_flag
+build --flag_alias=sf=@second//:second_flag

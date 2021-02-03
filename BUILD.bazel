@@ -1,0 +1,14 @@
+load("@bazel_skylib//rules:common_settings.bzl", "string_flag")
+load("first_rule.bzl", "first_rule")
+
+package(default_visibility = ["//visibility:public"]) 
+
+string_flag(
+    name = "first_flag",
+    values = ["", "ff1", "ff2"],
+    build_setting_default = "ff2",
+)
+
+first_rule(
+    name = "first",
+)
